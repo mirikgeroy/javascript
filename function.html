@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>курс по Javascript</title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+        function summa(number1, number2) {
+            var summa = number1 + number2;
+            document.write("сума чисел " + number1 + " і " + number2 + " дорівнює " + summa + "<br>");
+        }
+        summa(3, 500);
+        //26 видимость переменных (глобальні і локальні змінні)
+        var number = 1;
+        summa(number, number);
+        //27 повернення функцій
+        function square(number) {
+            var itog = number * number;
+            return itog;
+        }
+        var total = square(2);
+        window.alert(total);// не працює!!!!!
+        //home work to 27 lesson
+        function fio() {
+            var firstName = prompt("введіть своє прізвище", "прізвище");
+            var secondName=prompt("введіть своє імя", "імя");
+            var poBatkovi=prompt("введіть своє по-батькові", "по-батькові");
+            var fio=document.write(firstName+" "+secondName+" "+poBatkovi);
+            return fio
+        }
+        fio();
+
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>курс по Javascript</title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+            //lessons 17 умовні оператори
+        var pogoda = "ясно";
+        if (pogoda == "ясно") {
+            document.write("Ура! ми їдемо на пляж" + "<br>");
+        }
+        else {
+            document.write("Будемо сидіти дома");
+        }
+        var count = 50;
+        if (count <= 10) {
+            document.write("Змінна count менше або рівно десяти");
+        }
+        else {
+            document.write("Змінна count більше десяти");
+        }
+        //lessons 18 copulative condition
+        var pogoda = "ясно";
+        var car = "да";
+        if (pogoda == "ясно" && car == "да") {
+            document.write("Ура! ми їдемо на пляж" + "<br>");
+        }
+        else {
+            document.write("Будемо сидіти дома");
+        }
+        var friend = "паша";
+        if (friend == "саша" || friend == "паша") {
+            document.write("Ура! ми їдемо на пляж" + "<br>");
+        }
+        else {
+            document.write("Будемо сидіти дома");
+        }
+        //20
+        friend = true;
+        if (friend) {
+            document.write("+<br><br>");
+        }
+        else {
+            document.write("-<br><br>");
+        }
+            </script>
+</div>
+</body>
+</html>
