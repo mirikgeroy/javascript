@@ -7,20 +7,84 @@
 <body>
 <div>
     <script type="text/javascript">
-       //28 method of string objects
-        var name="Іванdghndghn";
-        document.write("довжина обєкта name: "+name.length+"<br>");
+        //28 method of string objects
+        var name = "Іванdghndghn";
+        document.write("довжина обєкта name: " + name.length + "<br>");
         var fruit = "Апельсин";
         var newFruit = fruit.toUpperCase();
-        document.write(newFruit+"<br>");
+        document.write(newFruit + "<br>");
         var newFruit = fruit.toLowerCase();
-        document.write(newFruit+"<br>");
-       //30
+        document.write(newFruit + "<br>");
+        //30
         var myString = "Дуже гаряче Сонце. Дуже велике Сонце";
-        document.write(myString.indexOf("Сонце")+"<br>");
-        document.write(myString.lastIndexOf("Сонце")+"<br>");
+        document.write(myString.indexOf("Сонце") + "<br>");
+        document.write(myString.lastIndexOf("Сонце") + "<br>");
         //31
-        </script>
+        var mySite = "http://mirikgeroy.com";
+        var myDomen = mySite.slice(7);
+        document.write(myDomen + "<br>");
+        var myRoot = mySite.slice(7, 17);
+        document.write(myRoot + "<br>");
+        //home work
+        var myStr = "Гарний день.";
+        document.write(myStr.slice(7, 11) + "<br>");
+        //32
+        var city = "Сміла";
+        document.write(city.charAt(2) + "<br>");
+        document.write(city.charCodeAt(2) + "<br>");
+        var name = "Иваn";
+        var rusLetters = "аяАЯ";
+        document.write(rusLetters.charCodeAt(0) + "<br>");
+        document.write(rusLetters.charCodeAt(1) + "<br>");
+        document.write(rusLetters.charCodeAt(2) + "<br>");
+        document.write(rusLetters.charCodeAt(3) + "<br>");
+        for (var i = 0; i < name.length; i++) {
+            if (name.charCodeAt(i) < 1040 || name.charCodeAt(i) > 1103) {
+                document.write("Знайдено символ не керилиця! цей символ: " + name.charAt(i) + "<br>");
+            }
+        }
+        //home work
+        var chuvaki = ["boris", "Петро", "Оля"];
+        for (i = 0; i < chuvaki.length; i++) {
+            for (j = 0; j < chuvaki[i].length; j++) {
+                if (chuvaki[i].charCodeAt(j) < 1040 || chuvaki[i].charCodeAt(j) > 1103) {
+                    document.write("Знайдено символ не керилиця в  чувакові " + chuvaki[i] + "! цей символ: " + chuvaki[i].charAt(j) + "<br>");
+                }
+            }
+        }
+        //33
+        var test = "от ми і приїхали";
+        var regV = /ми/;
+        var result = test.search(regV);
+        document.write(result + "<br>");
+        var myIndex = "мій індекс 45000";
+        var regV = /^\d{5}/;
+        var result = myIndex.search(regV);
+        document.write(result + "<br>");
+        //34
+        var myIndex = "45000";
+        var regV = /^\d{5}$/;
+        var result = myIndex.search(regV);
+        document.write(result + "<br>");
+        //home work
+        function test(str) {
+            var regV = /^\d/;
+            var str1 = str.search(regV);
+            if (str1 == -1) {
+                var result = document.write("строка не починається з цифри")
+            }
+            else {
+                var result = document.write("строка починається з цифри: " + str.charAt(0))
+            }
+            return result;
+        }
+        test("1fgb");//не получилось.....(((
+        //35
+        var peoples = "петро 8(044)456-25-25 київ, сашко 8(044)252-52-53 київ, вася 8(047)25-25-25 черкаси";
+        var regV = /8\(044\)\d{3}-\d{2}-\d{2}/;
+        var result = peoples.match(regV);
+        document.write(result + "<br>");//знову не получилось....
+    </script>
 </div>
 </body>
 </html>
