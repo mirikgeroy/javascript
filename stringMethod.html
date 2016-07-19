@@ -67,23 +67,55 @@
         var result = myIndex.search(regV);
         document.write(result + "<br>");
         //home work
-        function test(str) {
+        function testing(s) {
             var regV = /^\d/;
-            var str1 = str.search(regV);
+            var str1 = s.search(regV);
             if (str1 == -1) {
-                var result = document.write("строка не починається з цифри")
+                var result = document.write("строка не починається з цифри<br>")
             }
             else {
-                var result = document.write("строка починається з цифри: " + str.charAt(0))
+                var result = document.write("строка починається з цифри: " + s.charAt(0)+ "<br>")
             }
             return result;
         }
-        test("1fgb");//не получилось.....(((
+        var a="1fgd";
+        testing(a);
         //35
         var peoples = "петро 8(044)456-25-25 київ, сашко 8(044)252-52-53 київ, вася 8(047)25-25-25 черкаси";
-        var regV = /8\(044\)\d{3}-\d{2}-\d{2}/;
+        var regV = /8\(044\)\d{3}-\d{2}-\d{2}/g;
         var result = peoples.match(regV);
-        document.write(result + "<br>");//знову не получилось....
+        document.write(result + "<br>");
+        //36
+        var testStr = "вчора я відкрив 5 сайтів: www.mirik.geroy.ua, " +
+                "http://my-mirik.ua/content, https://www.geroy.ua, porno-na-gulia.ua, dojki.UA";
+        var regV = /(https?:\/\/)?(www\.)?[a-z0-9-\.]{2,}\.ua/gi;
+        var result = testStr.match(regV);
+        for (var i=0; i<result.length; i++){
+            document.write(result[i]+"<br>");
+        }
+        //home work
+        var textStr="Иван вчера потерял свою кредитку, ее номер 1178-9087-2384-8787." +
+                "Поэтому он пошел в банк и описал ситуацию. Там пошли ему навстречу и выдали" +
+                "новую кредитку под номером:  1103-8899-0811-1722";
+        var regV=/[0-3]{4}-\d{4}-\d{4}-\d{4}/;
+        var result = textStr.match(regV);
+        document.write(result+"<br>");
+        //37
+        var myString = "www,mirik.geroy,ua, https://www,geroy,ua, porno-na-gulia.ua, dojki.UA";
+        var regV=/,/g;
+        var result=myString.replace(regV,'.');
+        document.write(result+"<br>");
+        //home work to 37
+        var oldString = "8/927/31/10/765";
+        var newSign = "-";
+        function replaceString(oldString,newSign) {
+            var regV=/\//g;
+            var newString=oldString.replace(regV,newSign);
+            document.write(newString+"<br>");
+        }
+        replaceString(oldString,newSign);
+        //38
+
     </script>
 </div>
 </body>

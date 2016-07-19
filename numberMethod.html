@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>курс по Javascript</title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+        //39
+        var fruit = 1;
+        if (isNaN(fruit)) {
+            document.write("в змінній не число<br>");
+        }
+        else {
+            document.write(fruit + "<br>");
+        }
+        //home work
+        var randSimbol = ["Молоко", 77, 11, "Мед", -88];
+        function searchNumber(arr) {
+            for (i = 0; i < arr.length; i++) {
+                if (isNaN(arr[i])) {
+                    document.write(i + "-й елемент не числовий<br>");
+                }
+                else {
+                    document.write(i + "-й елемент числовий: " + arr[i] + "<br>");
+                }
+            }
+        }
+        searchNumber(randSimbol);
+        //40
+        var count = "36.9 яблук";
+        var newCount = parseFloat(count);
+        var test = 65;
+        var result = newCount + test;
+        document.write(result + "<br>");
+        var bool = true;
+        document.write(Number(bool) + "<br>");
+        //home work to 40
+        var myArray = ["100 попугаев", "201 рубль", "624 доллара", "109 кроликов", "33 весельчака", "62 кабана"];
+        document.write(myArray + "<br>");
+        function newNumberArray(oldArray) {
+            for (i = 0; i < oldArray.length; i++) {
+                oldArray[i] = parseInt(oldArray[i]);
+            }
+        }
+        newNumberArray(myArray);
+        document.write(myArray + "<br>");
+        //41
+        var price = 10.30;
+        document.write(price.toFixed(2) + "<br>");
+        //home to 41
+        var randSimbol = [10.5, 15, 112, 77.6];
+        function newArray(oldArray) {
+            for (i = 0; i < oldArray.length; i++) {
+                oldArray[i] = oldArray[i].toFixed(2);
+            }
+        }
+        newArray(randSimbol);
+        document.write(randSimbol + "<br>");
+        //42 обєкт Math
+        var age = 80.001;
+        age = Math.round(age);
+        document.write(age + "<br>");
+        var age = 80.001;
+        age = Math.ceil(age);
+        document.write(age + "<br>");
+        var age = 80.901;
+        age = Math.floor(age);
+        document.write(age + "<br>");
+        //home to 42
+        var numberArray = [34.82, 12.90, 17.01, 78.51];
+        document.write(numberArray + "<br>");
+        var met="round";
+        function roundArray(oldArray, met) {
+            for (i = 0; i < oldArray.length; i++) {
+                oldArray[i] = Math.round(oldArray[i]);
+            }
+        }
+        roundArray(numberArray);
+        document.write(numberArray + "<br>");
+        //43
+        var rand=Math.round(Math.random()*100);
+        //document.write(rand + "<br>");
+        function myRandom(from,to) {
+            return Math.floor((Math.random()*(to-from+1))+from);
+        }
+        document.write(myRandom(30,100) + "<br>");
+        //home
+        var randomArray = new Array(10);
+        function ranArray(emptyArray,from,to) {
+            for (i = 0; i < emptyArray.length; i++) {
+                emptyArray[i] = myRandom(from,to);
+                document.write(emptyArray[i]+ "<br>");
+            }
+        }
+        var from=4;
+        var to=6;
+        var res= ranArray(randomArray,from,to);
+        document.write(res+ "<br>");//НЕ ПРАЦЮЄ!!!!
+
+    </script>
+</div>
+</body>
+</html>
