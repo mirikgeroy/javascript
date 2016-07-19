@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>курс по Javascript</title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+        //44 object Date
+        var forTame = new Date();
+        var year = forTame.getFullYear();
+        document.write("зараз рік: " + year + "<br>");
+        var month = forTame.getMonth() + 1;
+        document.write("зараз місяць: " + month + "<br>");
+        var day = forTame.getDate();
+        document.write("зараз день: " + day + "<br>");
+        var dayWeek = forTame.getDay();
+        document.write("зараз день тижня: " + dayWeek + "<br>");
+        var hour = forTame.getHours();
+        document.write("зараз година: " + hour + "<br>");
+        var minute = forTame.getMinutes();
+        document.write("зараз минута: " + minute + "<br>");
+        var seconds = forTame.getSeconds();
+        document.write("зараз сикунда: " + seconds + "<br>");
+        //home work
+        if (minute < 10) {
+            minute = "0" + minute;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+        document.write("зараз: " + hour + " : " + minute + " : " + seconds + "<br>");
+        //2
+        dayWeek = ["неділля", "понеділок", "вівторок", "середа", "четвер", "пятниця", "субота"];
+        day = forTame.getDay();
+        alert("На дворе день недели:" + dayWeek[day]);
+        //45
+        var now = new Date();
+        document.write("з 1 січня 1970 року пройшло мілісекунд: " + now.getTime() + "<br>");
+        var from1970 = now.getTime() / (1000 * 60 * 60 * 24);
+        document.write("з 1 січня 1970 року пройшло днів: " + Math.round(from1970) + "<br>");
+        var ny = new Date(2017, 0, 1, 0, 0, 0);
+        var from1970ToNy = (ny.getTime() / (1000 * 60 * 60 * 24));
+        document.write("до нового року залишилось: " + (Math.round(from1970ToNy) - Math.round(from1970)) + "<br>");
+        document.write("це буде день тижня: " + dayWeek[ny.getDay()] + "<br>");
+        var test = new Date(1000 * 60 * 60 * 24);
+        document.write(test.toDateString() + '   ' + test.toTimeString()+"<br>");
+        //home work to 45
+        var countDay = prompt("ЧЕРЕЗ СКІЛЬКИ ДНІВ ВАМ ПОТРІБНА ДАТА?", "кількість днів від 0 до 1000");
+        function nameDay(countDay) {
+            var nextDay = new Date();
+            var nowMilli = nextDay.getTime();
+            var milisCountDay = new Date(1000 * 60 * 60 * 24 * countDay);
+            var nextMilli=milisCountDay.getTime();
+            var nextD=nowMilli+nextMilli;
+            var itogNow=new Date(nextD);
+            document.write("через "+countDay+" буде дата:"+"<br>");
+            document.write("день тижня: "+dayWeek[itogNow.getDay()]+"<br>");
+            document.write("число місяця: "+itogNow.getDate()+"<br>");
+            document.write("місяць: "+(itogNow.getMonth()+1)+"<br>");
+            document.write("рік: "+itogNow.getFullYear()+"<br>");
+        }
+        nameDay(countDay);
+    </script>
+</div>
+</body>
+</html>
