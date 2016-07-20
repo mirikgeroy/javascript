@@ -46,20 +46,48 @@
 //        }
         document.write("<br>");
         function userDetails() {
-            document.write(navigator.userAgent+"<br>");
+            document.write("ваш браузер: "+navigator.userAgent+"<br>");
             document.write(navigator.language+"<br>");
             document.write(navigator.oscpu+"<br>");
             document.write(navigator.cookieEnabled+"<br>");
             document.write(navigator.onLine+"<br>");
             document.write("розрешение екрана: "+screen.width+"x"+screen.height+"<br>");
             document.write("Глубина цвета: "+screen.colorDepth+"<br>");
+            document.write("адреса сторінки: "+location.href+"<br>");
         }
         userDetails();
-        var option;
-        for(option in screen){
-            document.write(option + ':' + screen[option]+"<br>");
+//        var option;
+//        for(option in screen){
+//            document.write(option + ':' + screen[option]+"<br>");
+//        }
+                var option;
+                for(option in location){
+                    document.write(option + ':' + location[option]+"<br>");
+                }
+        //home work
+        var browser =navigator.userAgent;
+        var regV=/firefox/i;
+        var regV2=/opera/i;
+        var regV3=/chrome/i;
+        var regV4=/msie/i;
+        if (browser.search(regV)!=-1){
+            document.write("ваш браузер firefox <br>");
         }
-
+        else if
+        (browser.search(regV2)!=-1){
+            document.write("ваш браузер opera <br>");
+        }
+        else if
+        (browser.search(regV3)!=-1){
+            document.write("ваш браузер chrome <br>");
+        }
+        else if
+        (browser.search(regV4)!=-1){
+            document.write("ваш браузер msie <br>");
+        }
+        else {
+            document.write("ваш браузер невідомий <br>");
+        }
     </script>
 </div>
 </body>
