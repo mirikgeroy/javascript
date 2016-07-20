@@ -8,20 +8,26 @@
 </head>
 <body>
 <script>
-        //24
-        var newWin = open("","Нове вікно","width=800,height=300");
-        newWin.document.write("new info");
-        alert("я модальное окно");
-        var age = prompt("haw mach old?", "хуйня якась");
-        alert("Your age: "+age);
-        var answer = confirm("ви ідете з нами на море?");
-        if (answer) {
-            document.write("ура! ідемо разом!");
-        }
-        else {
-            document.write("Ви нудні!");
-        }
-
+    //24
+    var newWin = open("", "Нове вікно", "width=800,height=300");
+    newWin.document.write("new info");
+    alert("я модальное окно");
+    var age = prompt("haw mach old?", "хуйня якась");
+    alert("Your age: " + age);
+    var answer = confirm("ви ідете з нами на море?");
+    if (answer) {
+        document.write("ура! ідемо разом!");
+    }
+    else {
+        document.write("Ви нудні!");
+    }
+    //46
+    function forLesson() {
+        alert('привіт! це тест!');
+    }
+    setTimeout(forLesson,3000);
+    var idInt = setInterval(forLesson, 3000);
+    clearInterval(idInt);
 </script>
 
 </body>

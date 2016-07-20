@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>курс по Javascript</title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+        //50
+        var car = new Object();
+        car.color = "Білий";
+        car.maxSpeed = 220;
+        car.brand = "Toyota";
+        document.write("колір машини: " + car.color + "<br>");
+        var moto = {
+                    color: "жовтий",
+                    power: 130,
+                    brand: "BMW",
+                }
+                ;
+        document.write("колір мотоцикла: " + moto.color + "<br>");
+        //51
+        var test = "червоний";
+        document.write(moto[test] + "<br>");
+        var summerTour = {
+            turkey: 2000,
+            spain: 3000,
+            ukraine: 100
+        };
+        summerTour.calc=function (peoples, days, country) {
+            var result = peoples*days*this[country];
+            return result;
+        };
+        document.write("вартість поїздки "+summerTour.calc(2,10,"spain")+" гривень<br>");
+        //52
+        var option;
+        for(option in summerTour){
+            document.write(option + ':' + summerTour[option]+"<br>"+"<br>");
+        }
+        //spravkaweb.ru
+        //53
+//        var option;
+//        for(option in navigator){
+//            document.write(option + ':' + navigator[option]+"<br>");
+//        }
+        document.write("<br>");
+        function userDetails() {
+            document.write(navigator.userAgent+"<br>");
+            document.write(navigator.language+"<br>");
+            document.write(navigator.oscpu+"<br>");
+            document.write(navigator.cookieEnabled+"<br>");
+            document.write(navigator.onLine+"<br>");
+            document.write("розрешение екрана: "+screen.width+"x"+screen.height+"<br>");
+            document.write("Глубина цвета: "+screen.colorDepth+"<br>");
+        }
+        userDetails();
+        var option;
+        for(option in screen){
+            document.write(option + ':' + screen[option]+"<br>");
+        }
+
+    </script>
+</div>
+</body>
+</html>

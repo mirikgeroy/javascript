@@ -7,7 +7,7 @@
 <body>
 <div>
     <script type="text/javascript">
-            //lessons 17 умовні оператори
+        //lessons 17 умовні оператори
         var pogoda = "ясно";
         if (pogoda == "ясно") {
             document.write("Ура! ми їдемо на пляж" + "<br>");
@@ -46,7 +46,31 @@
         else {
             document.write("-<br><br>");
         }
-            </script>
+        //48
+        var dver = prompt("вибкріть двері - від 1 до 5");
+        //        if (dver==1){
+        //            alert("ви виграли авто");
+        //        }
+        //...
+        switch (Number(dver)) {
+            case 1:
+                alert("ви виграли авто");
+                break;
+            case 2:
+                alert("ви виграли праску");
+                break;
+            case 3:
+                alert("ви виграли ножовку");
+                break;
+            default:
+                alert("ви виграли ручку");
+        }
+        //49
+        var apple = 4;
+        var orange = 5;
+        var result = (apple == orange) ? "однакові" : "кількість різна";
+        document.write(result);
+    </script>
 </div>
 </body>
 </html>
